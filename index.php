@@ -11,6 +11,10 @@
     <h1>Generatore di Password Casuale</h1>
 
     <?php
+
+
+    include('functions.php');
+
     if (isset($_GET['length'])) {
         $length = (int)$_GET['length'];
         if ($length > 0) {
@@ -28,14 +32,7 @@
         <input type="submit" value="Genera ">
     </form>
 
-    <?php
-    function generateRandomPassword($length)
-    {
-        $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=';
-        $password = substr(str_shuffle($characters), 0, $length);
-        return $password;
-    }
-    ?>
+
 </body>
 
 </html>
